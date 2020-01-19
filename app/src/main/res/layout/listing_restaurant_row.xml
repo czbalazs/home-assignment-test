@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/rest_listing_row_height"
+    android:layout_marginStart="@dimen/rest_listing_content_start_margin"
+    android:layout_marginEnd="@dimen/rest_listing_content_end_margin"
+    android:layout_marginTop="@dimen/rest_listing_row_top_margin"
+    android:layout_marginBottom="@dimen/rest_listing_row_bottom_margin"
+    android:background="@color/color_white"
+    android:elevation="@dimen/rest_listing_row_elevation">
+
+    <ImageView
+        android:id="@+id/rest_listing_thumbnail"
+        android:layout_width="@dimen/rest_listing_thumnail_size"
+        android:layout_height="@dimen/rest_listing_thumnail_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/rest_listing_top_margin"
+        android:layout_marginStart="@dimen/rest_listing_start_margin"/>
+
+    <RelativeLayout
+        android:id="@+id/rest_listing_call_view"
+        android:layout_width="@dimen/rest_listing_call_view_width"
+        android:layout_height="@dimen/rest_listing_call_view_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/rest_listing_start_margin"
+        android:layout_marginBottom="@dimen/rest_listing_bottom_margin"
+        android:background="@color/color_primary_action_background">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/primary_action_button"
+                android:layout_width="@dimen/rest_listing_primary_action_icon_size"
+                android:layout_height="@dimen/rest_listing_primary_action_icon_size"
+                android:layout_marginTop="@dimen/rest_listing_primary_action_top_margin"
+                android:layout_marginEnd="@dimen/rest_listing_primary_action_end_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eng_text_call_action"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/rest_listing_primary_action_text_size"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/rest_listing_thumbnail"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/rest_listing_top_margin"
+        android:layout_marginStart="@dimen/rest_listing_start_margin"
+        android:layout_marginEnd="@dimen/rest_listing_end_margin">
+
+        <LinearLayout
+            android:id="@+id/title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/rest_listing_titleview_height"
+            android:orientation="horizontal"
+            android:layout_marginEnd="@dimen/rest_listing_title_end_margin">
+
+            <ImageView
+                android:id="@+id/rest_listing_category_icon"
+                android:layout_width="@dimen/rest_listing_category_icon_size"
+                android:layout_height="@dimen/rest_listing_category_icon_size"/>
+
+            <TextView
+                android:id="@+id/rest_listing_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/rest_listing_category_icon_size"
+                android:layout_marginStart="@dimen/rest_listing_title_start_margin"
+                android:gravity="center"
+                android:textSize="@dimen/rest_listing_title_size"
+                android:textColor="@color/color_black"
+                android:text="Example title"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rest_listing_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/rest_listing_subtitle_size"/>
+
+        <TextView
+            android:id="@+id/rest_listing_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/rest_listing_subtitle_size"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rest_listing_subtitle_size">11sp</dimen>
+    <dimen name="rest_listing_title_size">17sp</dimen>
+    <dimen name="rest_listing_start_margin">12dp</dimen>
+    <dimen name="rest_listing_top_margin">8dp</dimen>
+    <dimen name="rest_listing_bottom_margin">8dp</dimen>
+    <dimen name="rest_listing_end_margin">8dp</dimen>
+    <dimen name="rest_listing_row_height">128dp</dimen>
+    <dimen name="rest_listing_content_start_margin">8dp</dimen>
+    <dimen name="rest_listing_content_end_margin">8dp</dimen>
+    <dimen name="rest_listing_row_top_margin">4dp</dimen>
+    <dimen name="rest_listing_row_bottom_margin">4dp</dimen>
+    <dimen name="rest_listing_thumnail_size">76dp</dimen>
+    <dimen name="rest_listing_call_view_width">68dp</dimen>
+    <dimen name="rest_listing_call_view_height">30dp</dimen>
+    <dimen name="rest_listing_primary_action_icon_size">16dp</dimen>
+    <dimen name="rest_listing_title_start_margin">4dp</dimen>
+    <dimen name="rest_listing_category_icon_size">18dp</dimen>
+    <dimen name="rest_listing_row_elevation">1dp</dimen>
+    <dimen name="rest_listing_primary_action_text_size">12.5sp</dimen>
+    <dimen name="rest_listing_primary_action_top_margin">2dp</dimen>
+    <dimen name="rest_listing_primary_action_end_margin">2dp</dimen>
+    <dimen name="rest_listing_title_end_margin">8dp</dimen>
+    <dimen name="rest_listing_titleview_height">20dp</dimen>
+</resources>
