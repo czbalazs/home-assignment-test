@@ -64,13 +64,10 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
                 .placeholder(R.drawable.process_animation)
                 .into(holder.categoryIcon);
 
-        holder.callView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(restaurant.getPrimaryAction().getUri()));
-                context.startActivity(intent);
-            }
+        holder.callView.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse(restaurant.getPrimaryAction().getUri()));
+            context.startActivity(intent);
         });
     }
 
