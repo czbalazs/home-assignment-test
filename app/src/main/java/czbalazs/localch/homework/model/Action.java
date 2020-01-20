@@ -1,4 +1,4 @@
-package czbalazs.localch.homework.model.response;
+package czbalazs.localch.homework.model;
 
 import com.google.gson.annotations.SerializedName;
 

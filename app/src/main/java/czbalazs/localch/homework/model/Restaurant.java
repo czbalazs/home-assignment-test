@@ -4,8 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import czbalazs.localch.homework.model.response.Action;
-
 public class Restaurant {
 
     @SerializedName("title")
