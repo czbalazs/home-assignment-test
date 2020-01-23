@@ -2,7 +2,9 @@ package czbalazs.localch.homework.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class RestaurantIconHolder {
+import java.io.Serializable;
+
+public class RestaurantIconHolder implements Serializable {
 
     @SerializedName("result_list")
     private Icon thumbnailIcon;

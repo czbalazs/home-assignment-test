@@ -1,6 +1,8 @@
 package czbalazs.localch.homework.model;
 
-class Category {
+import java.io.Serializable;
+
+class Category implements Serializable {
 
     private String id;
     private String name;

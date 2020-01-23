@@ -2,7 +2,9 @@ package czbalazs.localch.homework.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Action {
+import java.io.Serializable;
+
+public class Action implements Serializable {
 
     private String uri;
 

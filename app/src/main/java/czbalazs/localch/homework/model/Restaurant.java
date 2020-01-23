@@ -2,9 +2,10 @@ package czbalazs.localch.homework.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Restaurant {
+public class Restaurant implements Serializable {
 
     @SerializedName("title")
     private String title;

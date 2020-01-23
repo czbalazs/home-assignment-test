@@ -2,7 +2,9 @@ package czbalazs.localch.homework.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Icon {
+import java.io.Serializable;
+
+public class Icon implements Serializable {
 
     @SerializedName("src")
     private String urlString;
