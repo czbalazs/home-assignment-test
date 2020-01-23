@@ -20,13 +20,14 @@ public class RestaurantRepository implements RestaurantRepositoryInterface {
 
     private ApiService apiService;
 
+    private final MutableLiveData<List<Restaurant>> data = new MutableLiveData<>();
+
     public RestaurantRepository() {
         apiService = NetworkManager.getInstance();
     }
 
     @Override
     public LiveData<List<Restaurant>> getRestaurants() {
-        final MutableLiveData<List<Restaurant>> data = new MutableLiveData<>();
         apiService.fetchRestaurants()
                 .enqueue(new Callback<RestaurantResponse>() {
                     @Override
