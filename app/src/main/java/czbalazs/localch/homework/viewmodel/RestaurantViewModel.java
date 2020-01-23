@@ -14,6 +14,7 @@ public class RestaurantViewModel extends AndroidViewModel {
 
     private LiveData<List<Restaurant>> restaurants;
     private RestaurantRepository restaurantRepository;
+    private boolean isLoading;
 
     public RestaurantViewModel(@NonNull Application application) {
         super(application);
@@ -25,5 +26,9 @@ public class RestaurantViewModel extends AndroidViewModel {
 
     public LiveData<List<Restaurant>> getRestaurants() {
         return restaurants;
+    }
+
+    public void fetchNextRestaurantPage() {
+        restaurantRepository.fetchRestaurants();
     }
 }

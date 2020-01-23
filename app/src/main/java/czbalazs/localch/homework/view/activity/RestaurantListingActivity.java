@@ -7,6 +7,7 @@ import android.widget.ProgressBar;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +18,8 @@ import czbalazs.localch.homework.view.adapter.RestaurantListAdapter;
 import czbalazs.localch.homework.viewmodel.RestaurantViewModel;
 
 public class RestaurantListingActivity extends AppCompatActivity {
+
+    private static final Integer PAGE_SIZE = 10;
 
     private RestaurantViewModel restaurantViewModel;
     private RestaurantListAdapter adapter;
@@ -53,6 +56,24 @@ public class RestaurantListingActivity extends AppCompatActivity {
         restaurantViewModel = ViewModelProvider.AndroidViewModelFactory
                                                 .getInstance(getApplication())
                                                 .create(RestaurantViewModel.class);
+
+        restaurantRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+
+                int visibleItemCount = layoutManager.getChildCount();
+                int totalItemCount = layoutManager.getItemCount();
+                int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
+
+                if ((visibleItemCount + firstVisibleItemPosition) >= totalItemCount
+                        && firstVisibleItemPosition >= 0
+                        && totalItemCount >= PAGE_SIZE) {
+                    restaurantViewModel.fetchNextRestaurantPage();
+                }
+            }
+        });
     }
 
     private void getRestaurants() {
