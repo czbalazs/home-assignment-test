@@ -13,6 +13,5 @@
         android:id="@+id/rest_detail_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"/>
-
+        android:layout_marginTop="@dimen/rest_detail_subtitle_top_margin"/>
 </LinearLayout>

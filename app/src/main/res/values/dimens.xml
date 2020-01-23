@@ -23,4 +23,5 @@
     <dimen name="rest_listing_primary_action_end_margin">2dp</dimen>
     <dimen name="rest_listing_title_end_margin">8dp</dimen>
     <dimen name="rest_listing_titleview_height">20dp</dimen>
+    <dimen name="rest_detail_subtitle_top_margin">8dp</dimen>
 </resources>
