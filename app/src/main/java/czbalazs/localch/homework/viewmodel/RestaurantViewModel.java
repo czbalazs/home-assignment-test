@@ -19,7 +19,7 @@ public class RestaurantViewModel extends AndroidViewModel {
         super(application);
 
         restaurantRepository = new RestaurantRepository();
-        this.restaurants = restaurantRepository.getRestaurants();
+        this.restaurants = restaurantRepository.fetchRestaurants();
     }
 
 

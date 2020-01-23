@@ -27,7 +27,7 @@ public class RestaurantRepository implements RestaurantRepositoryInterface {
     }
 
     @Override
-    public LiveData<List<Restaurant>> getRestaurants() {
+    public LiveData<List<Restaurant>> fetchRestaurants() {
         apiService.fetchRestaurants()
                 .enqueue(new Callback<RestaurantResponse>() {
                     @Override
@@ -40,8 +40,9 @@ public class RestaurantRepository implements RestaurantRepositoryInterface {
 
                 @Override
                 public void onFailure(Call<RestaurantResponse> call, Throwable t) {
+                        // TODO: Do proper error handling
                         Log.e(RestaurantRepository.class.toString(),
-                                "getRestaurants failure: " + t.getMessage());
+                                "fetchRestaurants failure: " + t.getMessage());
                 }
         });
 

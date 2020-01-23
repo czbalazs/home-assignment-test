@@ -7,6 +7,6 @@ import czbalazs.localch.homework.model.Restaurant;
 
 public interface RestaurantRepositoryInterface {
 
-    LiveData<List<Restaurant>> getRestaurants();
+    LiveData<List<Restaurant>> fetchRestaurants();
 
 }
