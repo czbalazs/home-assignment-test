@@ -66,7 +66,7 @@
         <LinearLayout
             android:id="@+id/title_view"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/rest_listing_titleview_height"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginEnd="@dimen/rest_listing_title_end_margin">
 
@@ -78,12 +78,13 @@
             <TextView
                 android:id="@+id/rest_listing_title"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/rest_listing_category_icon_size"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/rest_listing_title_start_margin"
-                android:gravity="center"
                 android:textSize="@dimen/rest_listing_title_size"
                 android:textColor="@color/color_black"
-                android:text="Example title"/>
+                android:text="Example title Example title Example title Example title Example title "
+                android:maxLines="1"
+                android:ellipsize="end"/>
         </LinearLayout>
 
         <TextView
