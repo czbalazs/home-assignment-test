@@ -20,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import czbalazs.localch.homework.R;
 import czbalazs.localch.homework.model.Restaurant;
+import czbalazs.localch.homework.view.activity.RestaurantDetailActivity;
 
 public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAdapter.RestaurantViewHolder> {
 
@@ -63,6 +64,12 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
                 .centerCrop()
                 .placeholder(R.drawable.process_animation)
                 .into(holder.categoryIcon);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(context, RestaurantDetailActivity.class);
+            intent.putExtra(RestaurantDetailActivity.RESTAURANT_EXTRA_KEY, restaurant);
+            context.startActivity(intent);
+        });
 
         holder.callView.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_DIAL);
